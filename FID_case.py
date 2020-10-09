@@ -17,12 +17,25 @@ import numpy as np
 from fid import FID
 from utils import RandomCrop
 
+import argparse
 
-gpu_id = 0
+
+parser = argparse.ArgumentParser(description='FID Parameters & Data folder')
+parser.add_argument('--GPU', type=int, default=0, metavar='GPU',
+                    help='GPU ID, for example, 0.')
+parser.add_argument('--batch-size', type=int, default=4, metavar='BATCH SIZE',
+                    help='batch size should be as big as possible if you have enough GPU memory.')
+parser.add_argument('--case-folder', type=str, required=True, metavar='Folder',
+                    help='In the case folder there should be three folders: GT*, Recon*, and Refine*')
+
+args = parser.parse_args()
+# ## GPU ID
+gpu_id = args.gpu
 # ## batch size could be bigger if you have enough GPU memory.
-batch_size = 4
+batch_size = args.batch_size
 
-root_folder = '/Users/Jin/Insync/0_ResearchWork/recon_MR_GAN/Knee'
+# ## folder
+root_folder = args.case_folder
 gt_folder = glob(join(root_folder, 'GT*'))[0]
 recon_folder = glob(join(root_folder, 'Recon*'))[0]
 refine_folder = glob(join(root_folder, 'Refine*'))[0]
