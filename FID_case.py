@@ -21,7 +21,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser(description='FID Parameters & Data folder')
-parser.add_argument('--GPU', type=int, default=0, metavar='GPU',
+parser.add_argument('--gpu', type=int, default=0, metavar='GPU',
                     help='GPU ID, for example, 0.')
 parser.add_argument('--batch-size', type=int, default=4, metavar='BATCH SIZE',
                     help='batch size should be as big as possible if you have enough GPU memory.')
