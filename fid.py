@@ -13,7 +13,7 @@ import numpy as np
 import torch
 from scipy import linalg
 from torch.nn.functional import adaptive_avg_pool2d
-from metrics.fid_inception import InceptionV3
+from fid_inception import InceptionV3
 
 
 class FID(object):
