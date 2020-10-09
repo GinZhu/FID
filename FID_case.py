@@ -14,8 +14,8 @@ from os.path import join
 from skimage import io
 import numpy as np
 
-from tests.fid_case_example.fid import FID
-from tests.fid_case_example.utils import RandomCrop
+from fid import FID
+from utils import RandomCrop
 
 
 gpu_id = 0
