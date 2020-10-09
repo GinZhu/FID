@@ -22,7 +22,7 @@ from torchvision.models.utils import load_state_dict_from_url
 # http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz
 FID_WEIGHTS_URL = 'https://github.com/mseitzer/pytorch-fid/releases/download/fid_weights/pt_inception-2015-12-05-6726825d.pth'
 
-FID_WEIGHTS_LOCAL = './metrics/pt_inception-2015-12-05-6726825d.pth'
+FID_WEIGHTS_LOCAL = './pt_inception-2015-12-05-6726825d.pth'
 
 
 class InceptionV3(nn.Module):
