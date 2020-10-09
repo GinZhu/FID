@@ -64,11 +64,11 @@ refine_imgs = np.array(refine_imgs)
 refine_imgs = refine_imgs[:, :, :, np.newaxis]
 
 # ## recon
-print('Folder {} Recon GAN FID: {:.4}'.format(
+print('Folder {} Recon GAN FID: {:.6}'.format(
     root_folder, fid(recon_imgs, gt_imgs)
 ))
 
 # ## refine
-print('Folder {} Refine GAN FID: {:.4}'.format(
+print('Folder {} Refine GAN FID: {:.6}'.format(
     root_folder, fid(refine_imgs, gt_imgs)
 ))
